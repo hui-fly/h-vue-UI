@@ -1,0 +1,27 @@
+.redBox {
+    position: absolute;
+   /* opacity: 0;*/
+    z-index: 50;
+    animation: redImg 2s infinite linear;
+    -webkit-animation: redImg 2s infinite linear;
+    -moz-animation: redImg 2s infinite linear;
+    -ms-animation: redImg 2s infinite linear;
+    -o-animation: redImg 2s infinite linear;
+}
+
+.redBox {
+    position: fixed;
+}
+.redBox .redBoxImg{
+    display: block;
+    width: 2rem;
+    height: 2.6rem;
+}
+@keyframes redImg {
+    0% {
+        top:0;
+    }
+    100% {
+        top: 100%;
+    }
+}

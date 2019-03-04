@@ -1,0 +1,52 @@
+@640rem: 640/10rem;
+@rem: 750/10rem;   //1rem=16px 1/@rem=16/75px;
+@white: #fff;
+* {
+    margin: 0;
+}
+input,
+button {
+    -webkit-appearance: none;
+    /* 去除iPhone中默认的input样式 */
+    outline: none;
+}
+p{
+   margin: 0;
+}
+.marquee-con1,.marquee-con2{
+    position: absolute;
+    top: 0/@rem;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 2rem;
+    .marquee {
+        p {
+            line-height: inherit;
+            text-align: center;
+        }
+    }
+}
+.marquee-con1 {
+    .marquee-top {
+        transition: 0.5s;
+    }
+}
+.marquee-con2 {
+    .marquee {
+        animation: scrollAni 5s linear infinite;
+        -webkit-animation:scrollAni 5s linear infinite;
+    }
+}
+.marquee-con {
+    height: 100%;
+}
+@keyframes scrollAni {
+    0% {transform:translate(0,0);}
+    100% {transform:translate(0,-100%);}
+}
+
+@-webkit-keyframes scrollAni  {
+    0% {-webkit-transform:translate(0,0);}
+    100% {-webkit-transform:translate(0,-100%);}
+}
